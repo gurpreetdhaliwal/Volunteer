@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_in_ngo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11eccf"
+    tools:context="com.example.admin.volunteer.SignInNgo">
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+
+         android:src="@drawable/man"
+         android:scaleType="centerCrop"
+         />
+    <TextView
+        android:id="@+id/ngo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="NGO"
+        android:textColor="#fff"
+        android:textSize="60dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ngo_btn"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linear"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:paddingLeft="20dp"
+            android:src="@drawable/email" />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="40dp"
+            android:hint="Email id"
+            android:textColor="#000"
+            android:textColorHint="#000"/>
+    </LinearLayout>
+                                                       
+   
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/password"
+            android:paddingLeft="20dp"/>
+    
+    
+        <EditText             
+        
+        android:layout_width="match_parent"
+            android:layout_height="40dp"
+        android:paddingLeft="40dp"
+        android:hint="Password"
+        android:textColor="#000"
+        android:id="@+id/password"
+            android:textColorHint="#000"
+
+        />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="300dp"
+            android:backgroundTint="#11ec6c"
+            android:onClick="SignIn"
+            android:text="SIGN IN"
+            android:textColor="#000"
+            android:textSize="20dp"
+
+
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/button"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#11ec6c"
+            android:onClick="SignUp"
+            android:text="SIGN UP"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:id="@+id/button1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forget Password ?"
+            android:textSize="20dp"
+            android:paddingLeft="70dp"
+            android:textColorHint="#fff"
+            android:onClick="forgetpassword"
+            android:id="@+id/forget"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

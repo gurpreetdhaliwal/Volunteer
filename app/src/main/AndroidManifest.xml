@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.volunteer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ngovolunteer" />
+        <activity android:name=".SignInNgo" />
+        <activity android:name=".SignInVolunteer" />
+        <activity android:name=".RegisterNgo" />
+        <activity android:name=".RegisterVolunteer" />
+        <activity android:name=".Main2Activity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".AppController" />
+        <activity android:name=".verify_ngo" />
+        <activity android:name=".volunteer_verify" />
+        <activity android:name=".Drawable_ngo" />
+        <activity android:name=".drawable2_ngo" />
+        <activity android:name=".volunteethome" />
+        <activity android:name=".Home" />
+        <activity android:name=".ngo" />
+        <activity android:name=".plus" />
+        <activity android:name=".events" />
+        <activity android:name=".account" />
+        <activity android:name=".ngosearchoption" />
+        <activity android:name=".addvolunteer" />
+        <activity android:name=".joinevent" />
+        <activity android:name=".Ngohome" />
+        <activity android:name=".Eventsngo" />
+        <activity android:name=".addngoevents" />
+        <activity android:name=".accountngo" />
+        <activity android:name=".forgetpassword" />
+        <activity android:name=".onetimepassword" />
+        <activity android:name=".Newpassword" />
+        <activity android:name=".editprofile"></activity>
+    </application>
+
+</manifest>

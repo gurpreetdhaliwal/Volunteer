@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_volunteer_verify"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2a73724b"
+    tools:context="com.example.admin.volunteer.volunteer_verify">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Enter Code"
+        android:textColorHint="#000"
+        android:paddingLeft="50dp"
+        android:background="#fff"
+        android:paddingRight="20dp"
+        android:layout_margin="70dp"
+        android:id="@+id/enter_id"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Verify"
+        android:textColorHint="#000"
+        android:paddingLeft="50dp"
+        android:background="#fff"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/enter_id"
+        android:layout_marginRight="70dp"
+        android:id="@+id/verify_id"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verify_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:background="#fff"
+        android:text="LOG IN"
+        android:textColor="#000"
+        />
+</RelativeLayout>
+
+
+

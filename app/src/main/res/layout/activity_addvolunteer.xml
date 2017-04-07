@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_addvolunteer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+
+    tools:context="com.example.admin.volunteer.addvolunteer">
+
+
+
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="ADD IMAGE"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#000"/>
+    <view
+        android:layout_width="500dip"
+        android:layout_height="2dip"
+        android:layout_marginBottom="60dp"
+
+
+        android:layout_alignParentBottom="true"
+        android:background="#000"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="POST"
+
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="#11ec6c"/>
+
+
+
+</RelativeLayout>

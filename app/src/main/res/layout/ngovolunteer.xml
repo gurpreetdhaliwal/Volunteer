@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ngovolunteer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+
+
+    tools:context="com.example.admin.volunteer.Ngovolunteer"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/man"
+        android:scaleType="centerCrop"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volunteer Management"
+        android:textSize="30dp"
+        android:textColor="#fff"
+        android:layout_marginLeft="20dp"
+
+        android:textStyle="bold"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="250dp"
+
+
+            >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NGO"
+            android:textSize="50dp"
+            android:onClick="RegisterNgo"
+            android:id="@+id/ngo_btn"
+            android:background="#11ec6c"
+            android:layout_margin="20dp"
+
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VOLUNTEER"
+            android:layout_below="@id/ngo_btn"
+            android:textSize="50dp"
+            android:onClick="RegisterVolunteer"
+            android:background="#11ec6c"
+            android:layout_margin="20dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

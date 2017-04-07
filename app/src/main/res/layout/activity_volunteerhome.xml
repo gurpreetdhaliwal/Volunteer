@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ngohome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.volunteer.volunteethome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/button_lay_id"
+        android:weightSum="5"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:onClick="openhome"
+            android:layout_weight="1"
+            android:background="#11ec6c"
+            android:textColor="#000"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NGOs"
+            android:onClick="openngo"
+            android:layout_weight="1"
+            android:background="#11ec6c"
+            android:textColor="#000"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="openplus"
+            android:layout_weight="1"
+            android:background="#11ec6c"
+            android:textColor="#000"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Events"
+            android:onClick="openevents"
+            android:layout_weight="1"
+            android:background="#11ec6c"
+            android:textColor="#000"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:onClick="openaccount"
+            android:layout_weight="1"
+            android:background="#11ec6c"
+            android:textColor="#000"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_lay_id"
+        android:id="@+id/frame_id">
+
+    </FrameLayout>
+</RelativeLayout>
+

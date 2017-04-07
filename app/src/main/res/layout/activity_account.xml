@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+
+    android:layout_height="match_parent">
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Edit profile"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+
+        android:paddingLeft="50dp"
+        android:paddingTop="5dp"
+        android:id="@+id/profile"
+        android:layout_marginLeft="20dp"
+        />
+
+
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/pencil"
+        android:layout_marginTop="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="Rate App"
+    android:textColor="#000"
+    android:textSize="20dp"
+    android:layout_marginTop="40dp"
+
+    android:paddingLeft="50dp"
+    android:paddingTop="5dp"
+    android:layout_below="@+id/profile"
+     android:id="@+id/rate"
+        android:layout_marginLeft="20dp"
+
+    />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/rate"
+        android:layout_marginTop="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/profile"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Feedback"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+
+        android:paddingLeft="50dp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/rate"
+        android:id="@+id/feedback"
+        android:layout_marginLeft="20dp"
+
+        />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/feedback"
+        android:layout_marginTop="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/rate"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Log Out"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="50dp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/feedback"
+
+        />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/shareapp"
+        android:layout_marginTop="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/feedback"
+        android:layout_marginLeft="20dp"
+        />
+
+
+
+
+
+
+    </RelativeLayout>
