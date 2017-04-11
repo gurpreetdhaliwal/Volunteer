@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     android:background="#2a73724b"
     tools:context="com.example.admin.volunteer.RegisterVolunteer">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,4 +131,6 @@
             android:id="@+id/submit_btn"
             />
     </LinearLayout>
+    </LinearLayout>
+</ScrollView>
 </RelativeLayout>

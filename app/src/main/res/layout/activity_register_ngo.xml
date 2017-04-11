@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:background="#2a73724b"
     tools:context="com.example.admin.volunteer.RegisterNgo">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,10 +24,7 @@
         android:tint="#fff"
         android:onClick="cross_btn"
         />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+
 
 
     <TextView
@@ -32,6 +38,20 @@
         android:textColor="#11ec6c"
         />
     <LinearLayout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -109,7 +129,7 @@
             android:textColor="#000"/>
         <EditText
             android:layout_height="30dp"
-            android:hint="Select City"
+            android:hint=" City"
             android:background="#fff"
             android:textColorHint="#000"
             android:paddingLeft="20dp"
@@ -140,5 +160,6 @@
             />
 
     </LinearLayout>
-
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

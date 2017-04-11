@@ -1,5 +1,6 @@
 package com.example.admin.volunteer;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,6 +44,12 @@ public class Ngohome extends AppCompatActivity {
         accountngo cm = new accountngo();
         ft.replace(R.id.frame_id, cm);
         ft.commit();
+    }
+
+    public void open_profile(View v)
+    {
+        Intent i = new Intent(Ngohome.this , editngo.class);
+        startActivity(i);
     }
 }
 

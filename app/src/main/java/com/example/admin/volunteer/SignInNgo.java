@@ -2,6 +2,7 @@ package com.example.admin.volunteer;
 
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,7 +53,7 @@ public class SignInNgo extends AppCompatActivity {
 
     public void SignIn(View v) {
 
-            String email = email_et.getText().toString();
+            final String email = email_et.getText().toString();
 
             String password = password_et.getText().toString();
 
@@ -80,9 +81,15 @@ public class SignInNgo extends AppCompatActivity {
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
+                            System.out.println(response);
 
                             try {
                                 if (response.getString("key").equals("done")) {
+
+                                    SharedPreferences.Editor sp = getSharedPreferences("ngo_info" , MODE_PRIVATE).edit();
+                                    sp.putString("saved_email" , email);
+                                    sp.commit();
+
                                     Intent i =new Intent(SignInNgo.this , Ngohome.class);
 
                                     startActivity(i);
@@ -98,6 +105,8 @@ public class SignInNgo extends AppCompatActivity {
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
+
+                    System.out.println(error);
 
                 }
             });

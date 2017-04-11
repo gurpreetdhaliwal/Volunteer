@@ -36,6 +36,13 @@ public class SignInVolunteer extends AppCompatActivity {
     }
 
 
+    public void forgetpassword(View v){
+
+        Intent i = new Intent(SignInVolunteer.this ,forgetpassvolunteer.class);
+        startActivity(i);
+    }
+
+
     public void SignUp(View v) {
 
         Intent i = new Intent(SignInVolunteer.this, RegisterVolunteer.class);

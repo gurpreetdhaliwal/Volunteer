@@ -52,7 +52,10 @@
         <activity android:name=".forgetpassword" />
         <activity android:name=".onetimepassword" />
         <activity android:name=".Newpassword" />
-        <activity android:name=".editprofile"></activity>
+        <activity android:name=".editngo" />
+        <activity android:name=".forgetpassvolunteer" />
+        <activity android:name=".onetimepassvolunteer" />
+        <activity android:name=".newpassvolunteer"></activity>
     </application>
 
 </manifest>
