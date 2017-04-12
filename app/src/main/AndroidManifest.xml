@@ -36,7 +36,7 @@
         <activity android:name=".volunteer_verify" />
         <activity android:name=".Drawable_ngo" />
         <activity android:name=".drawable2_ngo" />
-        <activity android:name=".volunteethome" />
+        <activity android:name=".volunteerhome" />
         <activity android:name=".Home" />
         <activity android:name=".ngo" />
         <activity android:name=".plus" />
@@ -55,7 +55,8 @@
         <activity android:name=".editngo" />
         <activity android:name=".forgetpassvolunteer" />
         <activity android:name=".onetimepassvolunteer" />
-        <activity android:name=".newpassvolunteer"></activity>
+        <activity android:name=".newpassvolunteer" />
+        <activity android:name=".editvolunteer"></activity>
     </application>
 
 </manifest>

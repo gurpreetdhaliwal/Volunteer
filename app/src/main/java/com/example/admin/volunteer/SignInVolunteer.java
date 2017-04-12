@@ -2,6 +2,7 @@ package com.example.admin.volunteer;
 
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,7 +51,7 @@ public class SignInVolunteer extends AppCompatActivity {
     }
 
     public void SignIn(View v){
-            String email = email_et.getText().toString();
+            final String email = email_et.getText().toString();
 
             String password = password_et.getText().toString();
 
@@ -82,7 +83,11 @@ public class SignInVolunteer extends AppCompatActivity {
                             try {
                                 if (response.getString("key").equals("done")) {
 
-                                    Intent i =new Intent(SignInVolunteer.this , volunteethome.class);
+                                    SharedPreferences.Editor sp = getSharedPreferences("volunteer_info" , MODE_PRIVATE).edit();
+                                    sp.putString("saved_email" , email);
+                                    sp.commit();
+
+                                    Intent i =new Intent(SignInVolunteer.this , volunteerhome.class);
 
                                      startActivity(i);
 

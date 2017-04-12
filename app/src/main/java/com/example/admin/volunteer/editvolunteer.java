@@ -1,8 +1,9 @@
 package com.example.admin.volunteer;
 
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.content.SharedPreferences;
+
 import android.widget.EditText;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -14,38 +15,39 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class editngo extends AppCompatActivity {
 
-    EditText name_et, causes_et, phn_et, org_et, email_et,   city_et, address_et;
-
+public class editvolunteer extends AppCompatActivity {
+    EditText name_et, mobile_et,  email_et, education_et , city_et, address_et;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.editngo);
+        setContentView(R.layout.activity_editvolunteer);
 
-
-
-        name_et = (EditText) findViewById(R.id.ngo_et);
-        causes_et = (EditText) findViewById(R.id.causes_et);
-        phn_et = (EditText) findViewById(R.id.phone_et);
-        org_et = (EditText) findViewById(R.id.organization_et);
+        name_et = (EditText) findViewById(R.id.name_et);
+        mobile_et = (EditText) findViewById(R.id.mobile_et);
+        education_et = (EditText) findViewById(R.id.education_et);
+        city_et = (EditText) findViewById(R.id.city_et);
         email_et = (EditText) findViewById(R.id.email_et);
 
 
-        city_et = (EditText) findViewById(R.id.city_et);
+
         address_et = (EditText) findViewById(R.id.address_et);
 
         get_values();
 
-    }
 
+
+
+
+
+    }
     public void get_values()
     {
         JSONObject job = new JSONObject();
 
-        SharedPreferences sp = getSharedPreferences("ngo_info" , MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences("volunteer_info" , MODE_PRIVATE);
         String email = sp.getString("saved_email" , "");
 
         try {
@@ -54,26 +56,23 @@ public class editngo extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+ipaddress.ip+"/volunteer/get_profile.php", job, new Response.Listener<JSONObject>() {
+        JsonObjectRequest obreq = new JsonObjectRequest("http://"+ipaddress.ip+"/volunteer/volunteer_profile.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
                 System.out.println(response);
 
                 try {
-                    JSONArray jarr =  response.getJSONArray("key");
+                    JSONArray arr =  response.getJSONArray("key");
 
-                    JSONObject job_response = (JSONObject) jarr.get(0);
+                    JSONObject job_response = (JSONObject) arr.get(0);
 
-                   name_et.setText( job_response.getString("name") );
-                   causes_et.setText( job_response.getString("causes"));
-                   phn_et.setText( job_response.getString("phn"));
-                    org_et.setText(job_response.getString("organization"));
-
-
+                    name_et.setText( job_response.getString("name") );
+                    mobile_et.setText( job_response.getString("mobile"));
                     email_et.setText(job_response.getString("email"));
+                    education_et.setText( job_response.getString("education"));
+                    city_et.setText(job_response.getString("city"));
                     address_et.setText(job_response.getString("address"));
-                   city_et.setText(job_response.getString("city"));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -89,10 +88,12 @@ public class editngo extends AppCompatActivity {
             }
         });
 
-        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2 , 2));
+        obreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2 , 2));
 
-        AppController app = new AppController(editngo.this);
+        AppController app = new AppController(editvolunteer.this);
 
-        app.addToRequestQueue(jobreq);
+        app.addToRequestQueue(obreq);
     }
 }
+
+

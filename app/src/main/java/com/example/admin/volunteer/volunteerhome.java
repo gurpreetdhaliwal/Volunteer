@@ -1,5 +1,6 @@
 package com.example.admin.volunteer;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -12,7 +13,7 @@ import android.view.View;
  * Created by Admin on 30-03-2017.
  */
 
-public class volunteethome extends AppCompatActivity{
+public class volunteerhome extends AppCompatActivity{
     FragmentManager fm;
 
     @Override
@@ -54,6 +55,12 @@ public class volunteethome extends AppCompatActivity{
         account cm = new account();
         ft.replace(R.id.frame_id, cm);
         ft.commit();
+    }
+
+    public void open_volunteer_profile(View v)
+    {
+        Intent i = new Intent(volunteerhome.this , editvolunteer.class);
+        startActivity(i);
     }
 
 

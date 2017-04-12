@@ -1,7 +1,6 @@
 package com.example.admin.volunteer;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,16 +12,11 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import static com.example.admin.volunteer.R.id.confirm_et;
-import static com.example.admin.volunteer.R.id.volunteer;
 
 public class RegisterVolunteer extends AppCompatActivity {
     private EditText name_et, mobile_et, email_et, pass_et, confirm_pass, education_et, city_et, address_et;
@@ -120,7 +114,7 @@ public class RegisterVolunteer extends AppCompatActivity {
                            else if(response.getString("key").equals("1")) {
                                Toast.makeText(RegisterVolunteer.this ,"done" , Toast.LENGTH_SHORT).show();
 
-                               Intent i = new Intent(RegisterVolunteer.this ,volunteethome.class);
+                               Intent i = new Intent(RegisterVolunteer.this ,volunteerhome.class);
                                startActivity(i);
 
                                finish();
