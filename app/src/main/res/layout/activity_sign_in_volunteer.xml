@@ -53,6 +53,7 @@
         android:id="@+id/email"
         android:paddingLeft="40dp"
         android:textColorHint="#000"
+        android:inputType="textEmailAddress"
         />
     </LinearLayout>
 

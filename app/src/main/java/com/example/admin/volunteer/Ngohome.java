@@ -6,7 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class Ngohome extends AppCompatActivity {
@@ -35,7 +43,7 @@ public class Ngohome extends AppCompatActivity {
     public void openaddngoevents(View v) {
         FragmentTransaction ft = fm.beginTransaction();
         addngoevents cm = new addngoevents();
-        ft.replace(R.id.frame_id, cm);
+        ft. replace (R.id.frame_id, cm);
         ft.commit();
     }
 
@@ -51,6 +59,22 @@ public class Ngohome extends AppCompatActivity {
         Intent i = new Intent(Ngohome.this , editngo.class);
         startActivity(i);
     }
+
+    public void open_viewfeedback(View v)
+    {
+        Intent i = new Intent(Ngohome.this , viewfeedback.class);
+        startActivity(i);
+    }
+
+
+
+
+
+
+
+
+
+
 }
 
 

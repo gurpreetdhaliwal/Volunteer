@@ -27,7 +27,7 @@ public class editngo extends AppCompatActivity {
 
 
 
-        name_et = (EditText) findViewById(R.id.ngo_et);
+        name_et =( EditText) findViewById(R.id.ngo_et);
         causes_et = (EditText) findViewById(R.id.causes_et);
         phn_et = (EditText) findViewById(R.id.phone_et);
         org_et = (EditText) findViewById(R.id.organization_et);

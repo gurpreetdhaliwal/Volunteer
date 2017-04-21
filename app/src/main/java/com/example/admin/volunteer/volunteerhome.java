@@ -36,9 +36,9 @@ public class volunteerhome extends AppCompatActivity{
         ft.replace(R.id.frame_id, cm);
         ft.commit();
     }
-    public void openngo(View v){
+    public void openngosearchoption(View v){
         FragmentTransaction ft =fm.beginTransaction();
-        ngo cm = new ngo();
+        ngosearchoption cm = new ngosearchoption();
         ft.replace(R.id.frame_id, cm);
         ft.commit();
     }
@@ -57,9 +57,22 @@ public class volunteerhome extends AppCompatActivity{
         ft.commit();
     }
 
+    public void openaddvolunteer(View v){
+        FragmentTransaction ft =fm.beginTransaction();
+         addvolunteer cm = new addvolunteer();
+        ft.replace(R.id.frame_id, cm);
+        ft.commit();
+    }
+
     public void open_volunteer_profile(View v)
     {
         Intent i = new Intent(volunteerhome.this , editvolunteer.class);
+        startActivity(i);
+    }
+
+    public void open_addfeedback(View v)
+    {
+        Intent i = new Intent(volunteerhome.this , addfeedback.class);
         startActivity(i);
     }
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 
 
@@ -56,8 +57,8 @@ public class SignInVolunteer extends AppCompatActivity {
             String password = password_et.getText().toString();
 
 
-            if (email.equals("")) {
-                Toast.makeText(SignInVolunteer.this, "please enter your email", Toast.LENGTH_SHORT).show();
+            if ( ! Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(SignInVolunteer.this, "please enter valid email", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (password.equals("")) {

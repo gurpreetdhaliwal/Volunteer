@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 
 import org.json.JSONException;import android.widget.Button;
@@ -58,8 +59,8 @@ public class SignInNgo extends AppCompatActivity {
             String password = password_et.getText().toString();
 
 
-            if (email.equals("")) {
-                Toast.makeText(SignInNgo.this, "please enter your email", Toast.LENGTH_SHORT).show();
+        if ( ! Patterns.EMAIL_ADDRESS.matcher(email).matches())  {
+                Toast.makeText(SignInNgo.this, "please enter valid email", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (password.equals("")) {
@@ -88,6 +89,7 @@ public class SignInNgo extends AppCompatActivity {
 
                                     SharedPreferences.Editor sp = getSharedPreferences("ngo_info" , MODE_PRIVATE).edit();
                                     sp.putString("saved_email" , email);
+                                    sp.putString("ngo_id",response.getString("id"));
                                     sp.commit();
 
                                     Intent i =new Intent(SignInNgo.this , Ngohome.class);

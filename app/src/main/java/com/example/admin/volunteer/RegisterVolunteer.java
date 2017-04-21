@@ -3,6 +3,7 @@ package com.example.admin.volunteer;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,16 +57,16 @@ public class RegisterVolunteer extends AppCompatActivity {
                     Toast.makeText(RegisterVolunteer.this, "enter the name", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (mobile.equals("")) {
-                    Toast.makeText(RegisterVolunteer.this, "enter the mobile ", Toast.LENGTH_SHORT).show();
+                if (mobile.length()<10) {
+                    Toast.makeText(RegisterVolunteer.this, "re-enter the mobile ", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (email.equals("")) {
-                    Toast.makeText(RegisterVolunteer.this, "enter the email", Toast.LENGTH_SHORT).show();
+                if ( ! Patterns.EMAIL_ADDRESS.matcher(email).matches())  {
+                    Toast.makeText(RegisterVolunteer.this, "enter valid email", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (pass.equals("")) {
-                    Toast.makeText(RegisterVolunteer.this, "enter the password", Toast.LENGTH_SHORT).show();
+                if (pass.length() <8) {
+                    Toast.makeText(RegisterVolunteer.this, "enter atleast eight digit", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (confirm.equals("")) {

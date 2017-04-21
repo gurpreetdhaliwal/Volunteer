@@ -4,16 +4,139 @@
     android:id="@+id/activity_addngoevents"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="#35bc28"
-
+    android:background="#fff"
     tools:context="com.example.admin.volunteer.addngoevents">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EVENTS LAYOUT"
-        android:textColor="#fff"
-        android:textSize="20dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATE"
+            android:textColor="#11e"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:id="@+id/date"
+            android:background="@drawable/roundrec"
+            android:textColor="#000"
+            android:hint="date"
+            android:textColorHint="#53000000"
+            android:padding="10dp"
+            android:inputType="date"/>
+
+
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" EVENT NAME"
+            android:textColor="#11e"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:id="@+id/name"
+            android:background="@drawable/roundrec"
+            android:textColor="#000"
+            android:hint="name"
+            android:textColorHint="#53000000"
+            android:padding="10dp"
+            android:inputType="textPersonName"/>
+
+
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCATION"
+            android:textColor="#11e"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:id="@+id/location"
+            android:background="@drawable/roundrec"
+            android:textColor="#000"
+            android:hint="location"
+            android:textColorHint="#53000000"
+            android:padding="10dp"
+            android:inputType="textPostalAddress"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION"
+            android:textColor="#11e"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:id="@+id/description"
+            android:background="@drawable/roundrec"
+            android:textColor="#000"
+            android:hint="description"
+            android:textColorHint="#53000000"
+            android:padding="10dp"
+            android:inputType="text"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="ADD"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="#000"
+            android:textColor="#fff"
+            android:id="@+id/add_btn"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
 
 </RelativeLayout>

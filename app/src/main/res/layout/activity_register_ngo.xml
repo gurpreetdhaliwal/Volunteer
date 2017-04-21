@@ -38,20 +38,6 @@
         android:textColor="#11ec6c"
         />
     <LinearLayout
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -65,17 +51,19 @@
             android:textColorHint="#000"
             android:paddingLeft="20dp"
             android:id="@+id/name_et"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:inputType="textPersonName"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:hint="Select Causes"
+            android:hint="Enter Causes"
             android:background="#fff"
             android:textColorHint="#000"
             android:paddingLeft="20dp"
             android:layout_marginTop="20dp"
             android:id="@+id/causes_et"
             android:textColor="#000"
+            android:inputType="text"
             />
         <EditText
             android:layout_width="match_parent"
@@ -86,7 +74,9 @@
             android:paddingLeft="20dp"
             android:layout_marginTop="20dp"
             android:id="@+id/phn_et"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:inputType="phone"
+            android:maxLength="10"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -96,7 +86,8 @@
             android:paddingLeft="20dp"
             android:layout_marginTop="20dp"
             android:id="@+id/org_et"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:inputType="text"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -106,7 +97,8 @@
             android:paddingLeft="20dp"
             android:layout_marginTop="20dp"
             android:id="@+id/email_et"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:inputType="textEmailAddress"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -116,7 +108,8 @@
             android:paddingLeft="20dp"
             android:layout_marginTop="20dp"
             android:id="@+id/password_et"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:inputType="numberPassword"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -136,7 +129,8 @@
              android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:id="@+id/city_et"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:inputType="textPostalAddress"/>
         <EditText
             android:layout_height="30dp"
             android:hint="Address"
@@ -146,7 +140,8 @@
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:id="@+id/address_et"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:inputType="textPostalAddress"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

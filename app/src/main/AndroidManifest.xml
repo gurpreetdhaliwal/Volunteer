@@ -56,7 +56,9 @@
         <activity android:name=".forgetpassvolunteer" />
         <activity android:name=".onetimepassvolunteer" />
         <activity android:name=".newpassvolunteer" />
-        <activity android:name=".editvolunteer"></activity>
+        <activity android:name=".editvolunteer" />
+        <activity android:name=".addfeedback" />
+        <activity android:name=".viewfeedback"></activity>
     </application>
 
 </manifest>

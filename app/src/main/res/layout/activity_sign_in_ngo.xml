@@ -51,7 +51,8 @@
             android:paddingLeft="40dp"
             android:hint="Email id"
             android:textColor="#000"
-            android:textColorHint="#000"/>
+            android:textColorHint="#000"
+            android:inputType="textEmailAddress"/>
     </LinearLayout>
                                                        
    
