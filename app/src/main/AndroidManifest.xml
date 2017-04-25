@@ -58,7 +58,9 @@
         <activity android:name=".newpassvolunteer" />
         <activity android:name=".editvolunteer" />
         <activity android:name=".addfeedback" />
-        <activity android:name=".viewfeedback"></activity>
+        <activity android:name=".viewfeedback" />
+        <activity android:name=".volunteermoment" />
+        <activity android:name=".searchngo"></activity>
     </application>
 
 </manifest>

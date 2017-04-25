@@ -38,7 +38,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"
+            android:text="ADD"
             android:onClick="openaddvolunteer"
             android:layout_weight="1"
             android:background="#11ec6c"

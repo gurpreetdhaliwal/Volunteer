@@ -1,7 +1,7 @@
 package com.example.admin.volunteer;
 
 
-import android.content.Intent;
+
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 
@@ -61,7 +61,7 @@ public class addngoevents extends Fragment {
 
 
 
-    public void add_data(){
+    public void add_data() {
 
         String Date = date.getText().toString();
         String Name = name.getText().toString();
@@ -69,33 +69,29 @@ public class addngoevents extends Fragment {
         String Description = description.getText().toString();
 
 
-
-
         if (Date.equals("")) {
             Toast.makeText(getActivity(), "enter the date", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
         }
         if (Name.equals("")) {
             Toast.makeText(getActivity(), "enter the name", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
         }
         if (Location.equals("")) {
             Toast.makeText(getActivity(), "enter the location", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
         }
         if (Description.equals("")) {
             Toast.makeText(getActivity(), "enter  description", Toast.LENGTH_SHORT).show();
-            return ;
+            return;
         }
 
 
         JSONObject json = new JSONObject();
 
 
-
-
-              SharedPreferences sp = getActivity().getSharedPreferences("ngo_info" , MODE_PRIVATE);
-              String ngoid =   sp.getString("ngo_id","");
+        SharedPreferences sp = getActivity().getSharedPreferences("ngo_info", MODE_PRIVATE);
+        String ngoid = sp.getString("ngo_id", "");
 
 
         try {
@@ -104,31 +100,27 @@ public class addngoevents extends Fragment {
 
             json.put("l", Location);
             json.put("d", Description);
-            json.put("ngo_id",ngoid);
+            json.put("ngo_id", ngoid);
 
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-              System.out.println(json);
-        JsonObjectRequest req = new JsonObjectRequest("http://"+ipaddress.ip+"/volunteer/addevents.php", json, new Response.Listener<JSONObject>() {
+        System.out.println(json);
+        JsonObjectRequest req = new JsonObjectRequest("http://" + ipaddress.ip + "/volunteer/addevents.php", json, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try{
-                    if(response.getString("key").equals("0"))
-                    {
-                        Toast.makeText(getActivity() ,"error" , Toast.LENGTH_SHORT).show();
+                try {
+                    if (response.getString("key").equals("0")) {
+                        Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
 
-                    }
-                    else if(response.getString("key").equals("1")) {
-                        Toast.makeText(getActivity() ,"done" , Toast.LENGTH_SHORT).show();
+                    } else if (response.getString("key").equals("1")) {
+                        Toast.makeText(getActivity(), "done", Toast.LENGTH_SHORT).show();
 
 
-                    }
-
-                    else {
-                        Toast.makeText(getActivity() ,"error" , Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
 
                     }
                 } catch (JSONException e) {
@@ -152,6 +144,9 @@ public class addngoevents extends Fragment {
         app.addToRequestQueue(req);
 
     }
+
+
+
 };
 
 

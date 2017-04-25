@@ -56,10 +56,10 @@ public class volunteerhome extends AppCompatActivity{
         ft.replace(R.id.frame_id, cm);
         ft.commit();
     }
+    public void openaddvolunteer (View v){
 
-    public void openaddvolunteer(View v){
         FragmentTransaction ft =fm.beginTransaction();
-         addvolunteer cm = new addvolunteer();
+       addvolunteer cm = new addvolunteer();
         ft.replace(R.id.frame_id, cm);
         ft.commit();
     }
@@ -73,6 +73,12 @@ public class volunteerhome extends AppCompatActivity{
     public void open_addfeedback(View v)
     {
         Intent i = new Intent(volunteerhome.this , addfeedback.class);
+        startActivity(i);
+    }
+
+    public void opensearchngo(View v)
+    {
+        Intent i = new Intent(volunteerhome.this , searchngo.class);
         startActivity(i);
     }
 

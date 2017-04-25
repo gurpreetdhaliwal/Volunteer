@@ -30,18 +30,9 @@ public class editvolunteer extends AppCompatActivity {
         education_et = (EditText) findViewById(R.id.education_et);
         city_et = (EditText) findViewById(R.id.city_et);
         email_et = (EditText) findViewById(R.id.email_et);
-
-
-
         address_et = (EditText) findViewById(R.id.address_et);
 
         get_values();
-
-
-
-
-
-
     }
     public void get_values()
     {

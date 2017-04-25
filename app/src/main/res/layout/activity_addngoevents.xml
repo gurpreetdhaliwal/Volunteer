@@ -38,6 +38,8 @@
             android:background="@drawable/roundrec"
             android:textColor="#000"
             android:hint="date"
+            android:onClick="date"
+            android:clickable="true"
             android:textColorHint="#53000000"
             android:padding="10dp"
             android:inputType="date"/>
