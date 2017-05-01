@@ -2,7 +2,12 @@ package com.example.admin.volunteer;
 
 
 
+import android.annotation.TargetApi;
+import android.app.DatePickerDialog;
 import android.content.SharedPreferences;
+import android.icu.util.Calendar;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 
 import android.os.Bundle;
@@ -12,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.annotation.Nullable;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,14 +34,18 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class addngoevents extends Fragment {
 
-    EditText  date, name, location, description;
+
+    EditText date;
+    EditText name;
+    EditText location;
+    EditText description;
 
     Button add;
 
 
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View v = inflater.inflate(R.layout.activity_addngoevents, container, false);
 
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.activity_addngoevents, container, false);
 
 
         date = (EditText) v.findViewById(R.id.date);
@@ -43,10 +53,9 @@ public class addngoevents extends Fragment {
         location = (EditText) v.findViewById(R.id.location);
         description = (EditText) v.findViewById(R.id.description);
 
+
+
         add = (Button) v.findViewById(R.id.add_btn);
-
-
-
         View.OnClickListener click = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,23 +65,23 @@ public class addngoevents extends Fragment {
 
         add.setOnClickListener(click);
 
-        return v ;
-            }
-
+        return v;
+    }
 
 
     public void add_data() {
 
-        String Date = date.getText().toString();
+        String Date = name.getText().toString();
         String Name = name.getText().toString();
         String Location = location.getText().toString();
         String Description = description.getText().toString();
-
 
         if (Date.equals("")) {
             Toast.makeText(getActivity(), "enter the date", Toast.LENGTH_SHORT).show();
             return;
         }
+
+
         if (Name.equals("")) {
             Toast.makeText(getActivity(), "enter the name", Toast.LENGTH_SHORT).show();
             return;
@@ -144,10 +153,10 @@ public class addngoevents extends Fragment {
         app.addToRequestQueue(req);
 
     }
+}
 
 
 
-};
 
 
 

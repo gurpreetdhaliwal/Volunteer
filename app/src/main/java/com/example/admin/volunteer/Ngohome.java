@@ -1,11 +1,16 @@
 package com.example.admin.volunteer;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.icu.util.Calendar;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,6 +23,7 @@ import org.json.JSONObject;
 
 
 public class Ngohome extends AppCompatActivity {
+
     FragmentManager fm;
 
     @Override
@@ -28,7 +34,7 @@ public class Ngohome extends AppCompatActivity {
 
 
         FragmentTransaction ft = fm.beginTransaction();
-        Home cm = new Home();
+        Eventsngo cm = new Eventsngo();
         ft.replace(R.id.frame_id, cm);
         ft.commit();
 
@@ -68,14 +74,29 @@ public class Ngohome extends AppCompatActivity {
 
 
 
-
-
-
-
-
+    public void logout(View v)
+    {
+        Intent i = new Intent(Ngohome.this , MainActivity.class);
+        startActivity(i);
+    }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

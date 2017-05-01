@@ -28,6 +28,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
+
             />
 
         <EditText
@@ -111,7 +112,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="70dp"
             android:layout_margin="10dp"
             android:id="@+id/description"
             android:background="@drawable/roundrec"
@@ -121,13 +122,13 @@
             android:padding="10dp"
             android:inputType="text"/>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="ADD"
             android:textStyle="bold"
-            android:textSize="20dp"
-            android:background="#000"
+            android:textSize="30dp"
+            android:background="#11e"
             android:textColor="#fff"
             android:id="@+id/add_btn"
             android:layout_gravity="center"

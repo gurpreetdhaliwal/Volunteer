@@ -19,7 +19,11 @@ import org.json.JSONObject;
 
 import static com.example.admin.volunteer.R.id.confirm_et;
 
-public class RegisterVolunteer extends AppCompatActivity {
+public class RegisterVolunteer extends AppCompatActivity
+
+   {
+
+
     private EditText name_et, mobile_et, email_et, pass_et, confirm_pass, education_et, city_et, address_et;
     Button submit_btn;
 

@@ -1,5 +1,6 @@
 package com.example.admin.volunteer;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 
@@ -11,6 +12,7 @@ import android.support.annotation.Nullable;
 
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -30,13 +32,18 @@ public class addvolunteer extends Fragment {
 
     EditText name, description;
     Button post;
+    public  static  ImageView moment_image;
+
+    public static String moment_image_string;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_addvolunteer, container, false);
 
-        name = (EditText) v.findViewById(R.id.namen);
+        name = (EditText) v.findViewById(R.id.name);
 
-        description = (EditText) v.findViewById(R.id.descriptiond);
+        description = (EditText) v.findViewById(R.id.description);
+
+        moment_image = (ImageView) v.findViewById(R.id.home);
 
         post = (Button) v.findViewById(R.id.post_btn);
 
@@ -78,6 +85,7 @@ public class addvolunteer extends Fragment {
             json.put("n", Name);
             json.put("d", Description);
             json.put("saved_email", volunteeremail);
+            json.put("image" , moment_image_string);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -123,6 +131,11 @@ public class addvolunteer extends Fragment {
     }
 
 
-};
+
+
+
+
+
+}
 
 

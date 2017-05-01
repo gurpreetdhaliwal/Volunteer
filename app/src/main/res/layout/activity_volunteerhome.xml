@@ -5,72 +5,182 @@
     android:id="@+id/activity_ngohome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.volunteer.volunteerhome">
+    android:background="#fff"
+    tools:context="com.example.admin.volunteer.volunteerhome"
+
+    >
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:id="@+id/button_lay_id"
         android:weightSum="5"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+          android:background="#fff"
+        android:layout_marginBottom="30dp"
+        >
+
+
+
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home"
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
+            android:background="@drawable/home"
             android:onClick="openhome"
             android:layout_weight="1"
-            android:background="#11ec6c"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:id="@+id/home"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+
+
+
+
+            />
+
+
+
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NGOs"
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
             android:onClick="openngosearchoption"
             android:layout_weight="1"
-            android:background="#11ec6c"
-            android:textColor="#000"/>
+            android:background="@drawable/search"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            />
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ADD"
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
             android:onClick="openaddvolunteer"
             android:layout_weight="1"
-            android:background="#11ec6c"
-            android:textColor="#000"/>
+            android:background="@drawable/add"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="1dp"
+            />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Events"
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
             android:onClick="openevents"
             android:layout_weight="1"
-            android:background="#11ec6c"
+            android:background="@drawable/heart"
             android:textColor="#000"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Account"
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
             android:onClick="openaccount"
             android:layout_weight="1"
-            android:background="#11ec6c"
-            android:textColor="#000"/>
+            android:background="@drawable/user"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
 
 
+
+            />
     </LinearLayout>
+
+
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/button_lay_id"
-        android:id="@+id/frame_id">
+        android:id="@+id/frame_id"
+        android:background="#53000000">
 
     </FrameLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Home"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/home_text"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Ngo"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentBottom="true"
+            android:id="@id/ngo_btn"
+            android:layout_marginLeft="30dp"
+
+            android:layout_toRightOf="@id/home_text"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Add"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/ngo_btn"
+        android:layout_marginLeft="28dp"
+        android:id="@+id/add"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Events"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/add"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/events"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Account"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/events"
+        android:layout_marginLeft="10dp"
+        />
+
+
+
+
+
+
+
+
+
+
 </RelativeLayout>
 

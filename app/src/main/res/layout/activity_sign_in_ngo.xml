@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:background="#11eccf"
     tools:context="com.example.admin.volunteer.SignInNgo">
-     <ImageView
+
+
+
+
+    <ImageView
          android:layout_width="match_parent"
          android:layout_height="match_parent"
 
@@ -120,21 +124,22 @@
             android:textColor="#000"
             android:textSize="20dp"
             android:id="@+id/button1"/>
-        <Button
-            android:layout_width="match_parent"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forget Password ?"
-            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:text="Forgot Password ?"
+            android:textColor="#fff"
+            android:textSize="25dp"
             android:paddingLeft="70dp"
             android:textColorHint="#fff"
             android:onClick="forgetpassword"
             android:id="@+id/forget"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
 
 
             />
-
-
     </LinearLayout>
-
-
 </RelativeLayout>

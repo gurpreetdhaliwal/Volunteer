@@ -22,7 +22,7 @@ import org.json.JSONObject;
 public class SignInNgo extends AppCompatActivity {
     EditText email_et, password_et;
     Button sign_in_btn;
-    Button forget_password_btn;
+
 
 
 
@@ -35,7 +35,7 @@ public class SignInNgo extends AppCompatActivity {
         email_et = (EditText) findViewById(R.id.email);
         password_et = (EditText) findViewById(R.id.password);
         sign_in_btn = (Button) findViewById(R.id.sign_in_btn);
-        forget_password_btn =(Button)findViewById(R.id.forget);
+
 
 
     }

@@ -4,7 +4,7 @@
     android:id="@+id/activity_register_ngo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2a73724b"
+    android:background="#f773724b"
     tools:context="com.example.admin.volunteer.RegisterNgo">
     <ScrollView
         android:layout_width="match_parent"

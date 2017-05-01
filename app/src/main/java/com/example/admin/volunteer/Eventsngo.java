@@ -50,7 +50,7 @@ public class Eventsngo extends Fragment {
                 try {
                     JSONArray jsarr =  response.getJSONArray("key");
 
-                            eventadapter ad = new eventadapter(jsarr , getActivity());
+                            ngoadapter ad = new ngoadapter(jsarr , getActivity());
 
                     recycle.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
                     recycle.setAdapter(ad);

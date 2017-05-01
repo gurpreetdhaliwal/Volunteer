@@ -101,6 +101,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="5dp"
         android:layout_below="@+id/feedback"
+        android:onClick="logout"
 
         />
     <ImageView
