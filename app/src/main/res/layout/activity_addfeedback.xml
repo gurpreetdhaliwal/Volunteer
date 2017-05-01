@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_addfeedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#fff"
+    tools:context="com.example.admin.volunteer.addfeedback">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:hint="ngo name"
+        android:textColorHint="#53000000"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:background="@drawable/roundrec"
+        android:inputType="textPersonName"
+        android:id="@+id/ngo_name"
+        />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:hint="date"
+            android:textColorHint="#53000000"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:background="@drawable/roundrec"
+            android:inputType="date"
+            android:id="@+id/datef"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_margin="20dp"
+            android:hint="message"
+            android:textColorHint="#53000000"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:background="@drawable/roundrec"
+            android:inputType="text"
+            android:id="@+id/message"/>
+
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="SEND"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:background="#000"
+            android:textColor="#fff"
+            android:id="@+id/send_btn"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

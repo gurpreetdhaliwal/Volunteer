@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_searchngo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+
+
+    tools:context="com.example.admin.volunteer.searchngo">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/roundrec"
+        android:layout_margin="30dp"
+        android:hint="enter ngo name"
+        android:textColorHint="#000"
+        android:paddingLeft="20dp"
+        android:id="@+id/enterngo"
+
+        />
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/enterngo"
+        android:textColor="#fff"
+        android:background="#11ec6c"
+        android:text="SEARCH"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
