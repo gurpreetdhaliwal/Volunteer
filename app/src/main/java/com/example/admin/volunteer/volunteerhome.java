@@ -85,7 +85,7 @@ public class volunteerhome extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void opensearchngo(View v) {
+       public void opensearchngo(View v) {
         Intent i = new Intent(volunteerhome.this, searchngo.class);
         startActivity(i);
     }
@@ -94,9 +94,20 @@ public class volunteerhome extends AppCompatActivity {
 
 
 
+
+
     public void logout(View v) {
         Intent i = new Intent(volunteerhome.this, MainActivity.class);
         startActivity(i);
+    }
+    public void rate(View v){
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=" + this.getPackageName())));
+        } catch (android.content.ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
+        }
     }
 
 

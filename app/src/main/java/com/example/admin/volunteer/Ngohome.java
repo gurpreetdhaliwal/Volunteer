@@ -3,6 +3,7 @@ package com.example.admin.volunteer;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.icu.util.Calendar;
+import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
@@ -70,6 +71,27 @@ public class Ngohome extends AppCompatActivity {
     {
         Intent i = new Intent(Ngohome.this , viewfeedback.class);
         startActivity(i);
+    }
+
+
+
+    public void share (View v)
+    {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "Download the app 'Volunteer' via play store now...";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
+    public void rate(View v){
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=" + this.getPackageName())));
+        } catch (android.content.ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
+        }
     }
 
 

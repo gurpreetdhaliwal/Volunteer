@@ -59,11 +59,12 @@ public class SignInNgo extends AppCompatActivity {
             String password = password_et.getText().toString();
 
 
-        if ( ! Patterns.EMAIL_ADDRESS.matcher(email).matches())  {
-                Toast.makeText(SignInNgo.this, "please enter valid email", Toast.LENGTH_SHORT).show();
-                return;
-            }
-            if (password.equals("")) {
+        if ( ! Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(SignInNgo.this, "please enter valid email", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (password.equals("")) {
                 Toast.makeText(SignInNgo.this, "please enter your password", Toast.LENGTH_SHORT).show();
                 return;
             }

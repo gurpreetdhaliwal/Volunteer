@@ -1,5 +1,6 @@
 package com.example.admin.volunteer;
 
+import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.annotation.Nullable;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,11 +29,12 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 import static android.content.Context.MODE_PRIVATE;
 
 
 public class addfeedback extends AppCompatActivity {
-
     EditText ngo_name,  date, message;
 
     Button send;
@@ -59,6 +62,12 @@ public class addfeedback extends AppCompatActivity {
             }
         };
         send.setOnClickListener(click);
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                select_date();
+            }
+        });
 
 
     }
@@ -149,6 +158,38 @@ public class addfeedback extends AppCompatActivity {
         app.addToRequestQueue(req);
 
                 }
+    public void select_date ()
 
-};
+    {
+        Calendar mcurrentDate = Calendar.getInstance();
+        int year=mcurrentDate.get(Calendar.YEAR);
+        int month=mcurrentDate.get(Calendar.MONTH);
+        int day=mcurrentDate.get(Calendar.DAY_OF_MONTH);
+
+
+
+        final DatePickerDialog mDatePicker = new DatePickerDialog(addfeedback.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datepicker, int year, int month, int day) {
+
+                String date_s = String.valueOf(day) + "/" + String.valueOf(month + 1) + "/" + String.valueOf(year);
+
+                date.setText(date_s);
+
+
+            }
+        }, year, month, day);
+        mDatePicker.setTitle("Please select date");
+
+        mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis());
+
+        mDatePicker.show();
+
+    }
+
+
+}
+
+
+
 

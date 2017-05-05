@@ -42,7 +42,7 @@
         android:textColor="#000"
         android:textSize="20dp"
         android:layout_marginTop="40dp"
-
+        android:onClick="rate"
         android:paddingLeft="50dp"
         android:paddingTop="5dp"
         android:layout_below="@+id/profile"
@@ -126,6 +126,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="5dp"
         android:layout_below="@+id/logout"
+        android:onClick="share"
 
         />
     <ImageView
@@ -137,6 +138,7 @@
         android:paddingLeft="5dp"
         android:layout_below="@+id/logout"
         android:layout_marginLeft="20dp"
+
         />
 
 

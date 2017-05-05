@@ -26,6 +26,7 @@
         android:padding="10dp"
         android:textColor="#000"
         android:background="@drawable/roundrec"
+
         android:inputType="textPersonName"
         android:id="@+id/ngo_name"
         />
@@ -40,9 +41,11 @@
             android:textColorHint="#53000000"
             android:padding="10dp"
             android:textColor="#000"
-            android:background="@drawable/roundrec"
+             android:background="@drawable/roundrec"
             android:inputType="date"
-            android:id="@+id/datef"/>
+            android:id="@+id/datef"
+            android:onClick="select_date"/>
+
 
 
         <EditText

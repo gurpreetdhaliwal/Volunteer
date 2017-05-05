@@ -17,6 +17,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import static com.example.admin.volunteer.R.drawable.password;
 import static com.example.admin.volunteer.R.id.confirm_et;
 
 public class RegisterVolunteer extends AppCompatActivity
@@ -52,7 +53,7 @@ public class RegisterVolunteer extends AppCompatActivity
                 String name = name_et.getText().toString();
                 String mobile = mobile_et.getText().toString();
                 String email = email_et.getText().toString();
-                String pass = pass_et.getText().toString();
+                String password = pass_et.getText().toString();
                 String confirm = confirm_pass.getText().toString();
                 String education = education_et.getText().toString();
                 String city = city_et.getText().toString();
@@ -69,8 +70,8 @@ public class RegisterVolunteer extends AppCompatActivity
                     Toast.makeText(RegisterVolunteer.this, "enter valid email", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (pass.length() <8) {
-                    Toast.makeText(RegisterVolunteer.this, "enter atleast eight digit", Toast.LENGTH_SHORT).show();
+                if (password.length() >8) {
+                    Toast.makeText(RegisterVolunteer.this, "enter password atleast eight digit", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (confirm.equals("")) {
@@ -89,7 +90,7 @@ public class RegisterVolunteer extends AppCompatActivity
                     Toast.makeText(RegisterVolunteer.this, "enter the address", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if( ! confirm.equals(pass))
+                if( ! confirm.equals(password))
                 {
                     Toast.makeText(RegisterVolunteer.this, "password do not match", Toast.LENGTH_SHORT).show();
                     return;
@@ -99,7 +100,7 @@ public class RegisterVolunteer extends AppCompatActivity
                     json.put("n", name);
                     json.put("m", mobile);
                     json.put("e", email);
-                    json.put("p", pass);
+                    json.put("p", password);
                     json.put("d", education);
                     json.put("c", city);
                     json.put("a", address);
@@ -133,8 +134,8 @@ public class RegisterVolunteer extends AppCompatActivity
                        } catch (JSONException e) {
                            e.printStackTrace();
                        }
-                        {
-                       }
+
+
                     }
                 },
                         new Response.ErrorListener() {

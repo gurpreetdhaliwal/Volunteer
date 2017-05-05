@@ -21,6 +21,7 @@
         android:paddingLeft="20dp"
         android:id="@+id/newpassword"
         android:background="@drawable/roundrec"
+        android:inputType="numberPassword"
         />
 
     <Button

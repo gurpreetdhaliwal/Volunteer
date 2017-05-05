@@ -1,35 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_searchngo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#fff"
 
 
     tools:context="com.example.admin.volunteer.searchngo">
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2">
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/roundrec"
-        android:layout_margin="30dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+
         android:hint="enter ngo name"
         android:textColorHint="#000"
         android:paddingLeft="20dp"
         android:id="@+id/enterngo"
+        android:textColor="#000"
 
         />
     <Button
-        android:layout_width="110dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+
+        android:layout_marginLeft="20dp"
         android:layout_below="@+id/enterngo"
         android:textColor="#fff"
         android:background="#11ec6c"
         android:text="SEARCH"
+        android:onClick="search_ngo"
         android:textSize="20dp"
         android:textStyle="bold"/>
 
-</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/search_result">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngo name :"
+            android:textColor="#000"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" name "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:id="@+id/ngo_name_id"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngo cause :"
+            android:textColor="#000"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" name "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:id="@+id/ngo_cause_id"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact no :"
+            android:textColor="#000"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" name "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:id="@+id/ngo_contact_id"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngo Email :"
+            android:textColor="#000"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" name "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:id="@+id/ngo_email_id"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address  :"
+            android:textColor="#000"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" name "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:id="@+id/ngo_address_id"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

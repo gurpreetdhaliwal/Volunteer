@@ -2,6 +2,7 @@ package com.example.admin.volunteer;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -11,6 +12,8 @@ import android.widget.TextView;
 public class ngo_viewholder extends RecyclerView.ViewHolder {
 
     TextView name ,date ,location, description ;
+
+    LinearLayout cell_layout ;
     public ngo_viewholder(View itemView) {
         super(itemView);
 
@@ -18,6 +21,8 @@ public class ngo_viewholder extends RecyclerView.ViewHolder {
         date=(TextView)itemView.findViewById(R.id.date);
         location=(TextView)itemView.findViewById(R.id.location);
         description=(TextView)itemView.findViewById(R.id.description);
+
+        cell_layout = (LinearLayout) itemView.findViewById(R.id.cell_lay);
 
     }
 }
