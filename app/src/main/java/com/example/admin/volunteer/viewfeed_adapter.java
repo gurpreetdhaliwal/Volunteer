@@ -43,6 +43,7 @@ public class viewfeed_adapter   extends RecyclerView.Adapter<view_ngofeedholder>
 
 
             holder.date.setText(job.getString("date"));
+            holder.event_name.setText(job.getString("date"));
             holder.ngoname.setText(job.getString("ngo_name"));
             holder.message.setText(job.getString("message"));
         } catch (JSONException e) {

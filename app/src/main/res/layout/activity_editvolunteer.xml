@@ -198,7 +198,32 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="8dp"
-                    android:id="@+id/address_et"
+                    android:id="@+id/address_et"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CAUSES"
+                    android:textColor="#11ec6c"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="30dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:hint="Causes"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColorHint="#fff"
+                    android:background="#000"
+                    android:paddingLeft="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/causes_et"
+
 
 
 
@@ -212,7 +237,7 @@
                     android:textSize="20dp"
                     android:background="#11ec6c"
                     android:textColor="#000"
-                    android:onClick="update_btn"
+                    android:onClick="update_values"
                     android:layout_gravity="center"
                     android:layout_marginBottom="20dp"
 

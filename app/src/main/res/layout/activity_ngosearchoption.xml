@@ -23,33 +23,5 @@
         android:onClick="opensearchngo"
 
         />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/roundrec"
-        android:layout_margin="20dp"
-        android:text="Search For Ngo By Location"
-        android:textColor="#11ec6c"
-        android:layout_below="@+id/name"
-        android:id="@+id/location"
-        android:textSize="20dp"
-        android:textStyle="bold"
-
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/roundrec"
-        android:layout_margin="20dp"
-        android:text="Search For Ngo By Interest"
-        android:textColor="#11ec6c"
-        android:layout_below="@+id/location"
-        android:textSize="20dp"
-        android:textStyle="bold"
-
-        />
-
-
-
 
 </RelativeLayout>

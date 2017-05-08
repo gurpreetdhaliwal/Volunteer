@@ -25,7 +25,7 @@ public class RegisterVolunteer extends AppCompatActivity
    {
 
 
-    private EditText name_et, mobile_et, email_et, pass_et, confirm_pass, education_et, city_et, address_et;
+    private EditText name_et, mobile_et, email_et, pass_et, confirm_pass, education_et, city_et, address_et ,causes_et;
     Button submit_btn;
 
 
@@ -45,6 +45,7 @@ public class RegisterVolunteer extends AppCompatActivity
         city_et = (EditText) findViewById(R.id.city_id);
         address_et = (EditText) findViewById(R.id.address_et);
         submit_btn = (Button) findViewById(R.id.submit_btn);
+        causes_et = (EditText) findViewById(R.id.causes_et);
 
         View.OnClickListener Btn_click = new View.OnClickListener() {
             @Override
@@ -56,6 +57,7 @@ public class RegisterVolunteer extends AppCompatActivity
                 String password = pass_et.getText().toString();
                 String confirm = confirm_pass.getText().toString();
                 String education = education_et.getText().toString();
+                String causes = causes_et.getText().toString();
                 String city = city_et.getText().toString();
                 String address = address_et.getText().toString();
                 if (name.equals("")) {
@@ -82,6 +84,10 @@ public class RegisterVolunteer extends AppCompatActivity
                     Toast.makeText(RegisterVolunteer.this, "enter the education", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (causes.equals("")) {
+                    Toast.makeText(RegisterVolunteer.this, "enter the education", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (city.equals("")) {
                     Toast.makeText(RegisterVolunteer.this, "enter the city", Toast.LENGTH_SHORT).show();
                     return;
@@ -104,6 +110,7 @@ public class RegisterVolunteer extends AppCompatActivity
                     json.put("d", education);
                     json.put("c", city);
                     json.put("a", address);
+                    json.put("s", causes);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

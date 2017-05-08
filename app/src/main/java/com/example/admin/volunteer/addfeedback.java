@@ -35,22 +35,20 @@ import static android.content.Context.MODE_PRIVATE;
 
 
 public class addfeedback extends AppCompatActivity {
-    EditText ngo_name,  date, message;
+    EditText ngo_name,  date, message ,event_name;
 
     Button send;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+       super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addfeedback);
 
 
         ngo_name = (EditText) findViewById(R.id.ngo_name);
-
+        event_name = (EditText) findViewById(R.id.event_name);
         date = (EditText) findViewById(R.id.datef);
-
-
         message = (EditText) findViewById(R.id.message);
 
         send = (Button) findViewById(R.id.send_btn);
@@ -76,6 +74,8 @@ public class addfeedback extends AppCompatActivity {
 
 
         String Name =  ngo_name.getText().toString();
+        String Event =  event_name.getText().toString();
+
 
 
         String Date = date.getText().toString();
@@ -88,11 +88,15 @@ public class addfeedback extends AppCompatActivity {
             return;
         }
 
+
+        if (Event.equals("")) {
+            Toast.makeText(addfeedback.this, "enter the event name", Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (Date.equals("")) {
             Toast.makeText(addfeedback.this, "enter the date", Toast.LENGTH_SHORT).show();
             return;
         }
-
 
         if (Message.equals("")) {
             Toast.makeText(addfeedback.this, "enter  message", Toast.LENGTH_SHORT).show();
@@ -111,7 +115,7 @@ public class addfeedback extends AppCompatActivity {
 
         try {
             json.put("n",Name);
-
+            json.put("e",Event);
             json.put("d", Date);
             json.put("m", Message);
             json.put("saved_email", volunteeremail);

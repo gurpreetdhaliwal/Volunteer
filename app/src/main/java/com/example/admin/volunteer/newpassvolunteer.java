@@ -38,9 +38,8 @@ public class newpassvolunteer extends AppCompatActivity {
 
         String newpassword =  newpassword_et.getText().toString();
 
-        if (newpassword.equals("")){
-
-            Toast.makeText( newpassvolunteer.this ,"enter new password" , Toast.LENGTH_SHORT).show();
+        if (newpassword.length()>8) {
+            Toast.makeText(newpassvolunteer.this, "enter  password atleast eight digit", Toast.LENGTH_SHORT).show();
             return;
         }
 

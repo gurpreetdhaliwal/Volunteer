@@ -89,6 +89,11 @@ public class volunteerhome extends AppCompatActivity {
         Intent i = new Intent(volunteerhome.this, searchngo.class);
         startActivity(i);
     }
+    public void update_values(View v) {
+        Intent i = new Intent(volunteerhome.this, volunteerhome.class);
+        startActivity(i);
+    }
+
 
 
 

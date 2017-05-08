@@ -5,7 +5,7 @@ package com.example.admin.volunteer;
 import android.annotation.TargetApi;
 import android.app.DatePickerDialog;
 import android.content.SharedPreferences;
-import android.icu.util.Calendar;
+
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
@@ -25,9 +25,18 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.PlaceSelectionListener;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.places.Place;
+
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.util.Log;
+
+import java.util.Calendar;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -35,27 +44,46 @@ import static android.content.Context.MODE_PRIVATE;
 public class addngoevents extends Fragment {
 
 
-    EditText date;
+     String loc;
     EditText name;
-    EditText location;
+
     EditText description;
 
     Button add;
 
+    EditText date ;
 
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_addngoevents, container, false);
 
 
+        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
+                getActivity().getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(Place place) {
+                // TODO: Get info about the selected place.
+                Log.i("", "Place: " + place.getName());
+
+                loc = place.getAddress().toString();
+
+
+            }
+
+            @Override
+            public void onError(Status status) {
+                // TODO: Handle the error.
+                Log.i("", "An error occurred: " + status);
+            }
+        });
         date = (EditText) v.findViewById(R.id.date);
         name = (EditText) v.findViewById(R.id.name);
-        location = (EditText) v.findViewById(R.id.location);
+
         description = (EditText) v.findViewById(R.id.description);
-
-
-
         add = (Button) v.findViewById(R.id.add_btn);
+
         View.OnClickListener click = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,33 +93,41 @@ public class addngoevents extends Fragment {
 
         add.setOnClickListener(click);
 
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                select_date();
+            }
+        });
+
+
         return v;
     }
 
 
+
     public void add_data() {
 
-        String Date = name.getText().toString();
-        String Name = name.getText().toString();
-        String Location = location.getText().toString();
-        String Description = description.getText().toString();
 
-        if (Date.equals("")) {
-            Toast.makeText(getActivity(), "enter the date", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        String Name = name.getText().toString();
+
+        String Description = description.getText().toString();
+        String date_s = date.getText().toString();
 
 
         if (Name.equals("")) {
             Toast.makeText(getActivity(), "enter the name", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (Location.equals("")) {
-            Toast.makeText(getActivity(), "enter the location", Toast.LENGTH_SHORT).show();
-            return;
-        }
+
         if (Description.equals("")) {
             Toast.makeText(getActivity(), "enter  description", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(date_s.equals(""))
+        {
+            Toast.makeText(getActivity(), "enter  date ", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -105,11 +141,11 @@ public class addngoevents extends Fragment {
 
         try {
             json.put("n", Name);
-            json.put("t", Date);
 
-            json.put("l", Location);
             json.put("d", Description);
             json.put("ngo_id", ngoid);
+            json.put("t" , date_s);
+            json.put("l",loc);
 
 
         } catch (JSONException e) {
@@ -140,6 +176,7 @@ public class addngoevents extends Fragment {
             }
         },
                 new Response.ErrorListener() {
+
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         System.out.println(error);
@@ -153,7 +190,38 @@ public class addngoevents extends Fragment {
         app.addToRequestQueue(req);
 
     }
+    public void select_date ()
+
+    {
+        Calendar mcurrentDate = Calendar.getInstance();
+        int year=mcurrentDate.get(Calendar.YEAR);
+        int month=mcurrentDate.get(Calendar.MONTH);
+        int day=mcurrentDate.get(Calendar.DAY_OF_MONTH);
+
+
+
+        final DatePickerDialog mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datepicker, int year, int month, int day) {
+
+                String date_s = String.valueOf(day) + "/" + String.valueOf(month + 1) + "/" + String.valueOf(year);
+
+                date.setText(date_s);
+
+
+            }
+        }, year, month, day);
+        mDatePicker.setTitle("Please select date");
+
+        mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis());
+
+        mDatePicker.show();
+
+    }
+
+
 }
+
 
 
 

@@ -21,9 +21,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NAME"
+            android:text="EVENT NAME"
             android:textColor="#11e"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="DESCRIPTON"
             android:textColor="#11e"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -73,7 +73,7 @@
             android:textColor="#fff"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#000"
+            android:background="#11ec6c"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             />
@@ -95,13 +95,13 @@
           android:id="@+id/home"/>
 
             <Button
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="POST"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:textColor="#fff"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:background="#11e"
                 android:layout_marginTop="40dp"
                 android:layout_alignParentBottom="true"
